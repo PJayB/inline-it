@@ -1,0 +1,92 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+      "major": 3,
+      "minor": 22,
+      "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "win-mingw64",
+            "displayName": "Windows Mingw64",
+            "description": "x64 Mingw Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/x86_64-w64-mingw32",
+            "installDir": "${sourceDir}/install/x86_64-w64-mingw32",
+            "toolchainFile": "${sourceDir}/tools/xgb/cmake/arch/x86_64-w64-mingw32-gcc.cmake",
+            "cacheVariables": {
+                "CMAKE_C_FLAGS": "$env{CMAKE_C_FLAGS} -Wall -Werror -mwindows",
+                "CMAKE_C_FLAGS_DEBUG": "$env{CMAKE_C_FLAGS} -D_DEBUG -DDEBUG -O0 -g",
+                "CMAKE_CXX_FLAGS": "$env{CMAKE_CXX_FLAGS} -Wall -mwindows",
+                "CMAKE_CXX_FLAGS_DEBUG": "$env{CMAKE_CXX_FLAGS} -D_DEBUG -DDEBUG -O0 -g"
+            }
+        },
+        {
+            "name": "linux-x86_64",
+            "displayName": "Linux x86_64",
+            "description": "x86_64 Linux Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/x86_64-linux-gnu",
+            "installDir": "${sourceDir}/install/x86_64-linux-gnu",
+            "toolchainFile": "${sourceDir}/tools/xgb/cmake/arch/x86_64-linux-gnu-gcc.cmake",
+            "cacheVariables": {
+                "CMAKE_C_FLAGS": "$env{CMAKE_C_FLAGS} -Wall -Werror",
+                "CMAKE_C_FLAGS_DEBUG": "$env{CMAKE_C_FLAGS} -D_DEBUG -DDEBUG -O0 -g",
+                "CMAKE_CXX_FLAGS": "$env{CMAKE_CXX_FLAGS} -Wall",
+                "CMAKE_CXX_FLAGS_DEBUG": "$env{CMAKE_CXX_FLAGS} -D_DEBUG -DDEBUG -O0 -g"
+            }
+        },
+        {
+            "name": "linux-aarch64",
+            "displayName": "Linux aarch64",
+            "description": "aarch64 Linux Ninja Multi-Config",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build/aarch64-linux-gnu",
+            "installDir": "${sourceDir}/install/aarch64-linux-gnu",
+            "toolchainFile": "${sourceDir}/tools/xgb/cmake/arch/aarch64-linux-gnu-gcc.cmake",
+            "cacheVariables": {
+                "CMAKE_C_FLAGS": "$env{CMAKE_C_FLAGS} -Wall -Werror",
+                "CMAKE_C_FLAGS_DEBUG": "$env{CMAKE_C_FLAGS} -D_DEBUG -DDEBUG -O0 -g",
+                "CMAKE_CXX_FLAGS": "$env{CMAKE_CXX_FLAGS} -Wall",
+                "CMAKE_CXX_FLAGS_DEBUG": "$env{CMAKE_CXX_FLAGS} -D_DEBUG -DDEBUG -O0 -g"
+            }
+        },
+        {
+            "name": "win-vs2022",
+            "displayName": "Windows VS2022",
+            "description": "Visual Studio 2022 Project Generator",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build/x86_64-w64-vs2022",
+            "installDir": "${sourceDir}/install/x86_64-w64-vs2022",
+            "cacheVariables": {
+                "CMAKE_C_FLAGS": "$env{CMAKE_C_FLAGS} /Zi /EHsc",
+                "CMAKE_C_FLAGS_DEBUG": "$env{CMAKE_C_FLAGS} /D_DEBUG /DDEBUG /Od",
+                "CMAKE_CXX_FLAGS": "$env{CMAKE_CXX_FLAGS} /Zi /EHsc",
+                "CMAKE_CXX_FLAGS_DEBUG": "$env{CMAKE_CXX_FLAGS} /D_DEBUG /DDEBUG /Od",
+                "PLATFORM_VARIANT": "x86_64-w64-vs2022"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "linux-x86_64",
+            "displayName": "Linux x86_64",
+            "configurePreset": "linux-x86_64"
+        },
+        {
+            "name": "linux-aarch64",
+            "displayName": "Linux aarch64",
+            "configurePreset": "linux-aarch64"
+        },
+        {
+            "name": "win-mingw64",
+            "displayName": "Windows Mingw64",
+            "configurePreset": "win-mingw64"
+        },
+        {
+            "name": "win-vs2022",
+            "displayName": "Windows VS2022",
+            "configurePreset": "win-vs2022"
+        }
+    ]
+}

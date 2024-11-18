@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Default CMake folder
+build/
+
+# VSCode
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json

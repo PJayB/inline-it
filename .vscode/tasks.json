@@ -1,0 +1,150 @@
+{
+	"version": "2.0.0",
+    "options": {
+        "env": {
+            "EDITOR": "code"
+        }
+    },
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Build (Windows VS2022)",
+			"command": "'${workspaceRoot}/tools/build.sh'",
+			"args": [
+				"--open-log",
+				"--preset", "win-vs2022"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/src"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: cl.exe"
+		},
+		{
+			"type": "shell",
+			"label": "Configure (Windows VS2022)",
+			"command": "'${workspaceRoot}/tools/build.sh'",
+			"args": [
+				"--open-log",
+				"--configure",
+				"--preset", "win-vs2022"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/src"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: cl.exe"
+		},
+		{
+			"type": "shell",
+			"label": "Build (Linux x86_64)",
+			"command": "'${workspaceRoot}/tools/build.sh'",
+			"args": [
+				"--open-log",
+				"--preset", "linux-x86_64"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/src"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Configure (Linux x86_64)",
+			"command": "'${workspaceRoot}/tools/build.sh'",
+			"args": [
+				"--open-log",
+				"--configure",
+				"--preset", "linux-x86_64"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/src"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Build (Linux aarch64)",
+			"command": "'${workspaceRoot}/tools/build.sh'",
+			"args": [
+				"--open-log",
+				"--preset", "linux-aarch64"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/src"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Configure (Linux aarch64)",
+			"command": "'${workspaceRoot}/tools/build.sh'",
+			"args": [
+				"--open-log",
+				"--configure",
+				"--preset", "linux-aarch64"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/src"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Build (Windows Mingw64)",
+			"command": "'${workspaceRoot}/tools/build.sh'",
+			"args": [
+				"--open-log",
+				"--preset", "win-mingw64"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/src"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: gcc"
+		},
+		{
+			"type": "shell",
+			"label": "Configure (Windows Mingw64)",
+			"command": "'${workspaceRoot}/tools/build.sh'",
+			"args": [
+				"--open-log",
+				"--configure",
+				"--preset", "win-mingw64"
+			],
+			"options": {
+				"cwd": "${workspaceRoot}/src"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: gcc"
+		}
+	]
+}

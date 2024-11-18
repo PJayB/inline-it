@@ -1,0 +1,107 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Linux x86_64 Debug (gdb)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/linux-x86_64/src/Debug/inline-it",
+            "args": [
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build (Linux x86_64)"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Linux x86_64 Debug (LLDB)",
+            "program": "${workspaceRoot}/build/linux-x86_64/src/Debug/inline-it",
+            "args": [
+            ],
+            "env": {
+                "LD_PRELOAD": "${workspaceFolder}/librenderdoc.so"
+            },
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Build (Linux x86_64)"
+        },
+        {
+            "name": "VS2022 Debug (cppvsdbg)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/win-vs2022/src/Debug/inline-it.exe",
+            "args": [
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build (Windows VS2022)"
+        },
+        {
+            "name": "Mingw64 Debug (GDB)",
+            "type": "cppdbg",
+            "MIMode": "gdb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/win-mingw64/src/Debug/inline-it.exe",
+            "linux": {
+                "args": [
+                ],
+                "miDebuggerPath": "/usr/bin/x86_64-w64-mingw32-gdb",
+                "miDebuggerServerAddress": "localhost:3333",
+                "useExtendedRemote": true,
+                "preLaunchTask": "Build & Launch Wine GDB Server"
+            },
+            "windows": {
+                "args": [
+                ],
+                "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
+                "preLaunchTask": "Build (Windows Mingw64)"
+            },
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "environment": [],
+            "externalConsole": true,
+            "filterStderr": true,
+            "filterStdout": false,
+            "logging": {
+                "moduleLoad": true,
+                "trace": true,
+                "engineLogging": true,
+                "programOutput": true,
+                "exceptions": true
+            },
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set remote executable",
+                    "text": "-gdb-set remote exec-file ${workspaceRoot}/build/mingw64/src/Debug/inline-it.exe",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

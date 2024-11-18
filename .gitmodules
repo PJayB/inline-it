@@ -1,0 +1,9 @@
+[submodule "extras/tclap"]
+	path = extra/tclap
+	url = git@github.com:mirror/tclap.git
+[submodule "extras/fmt"]
+	path = extra/fmt
+	url = https://github.com/fmtlib/fmt.git
+[submodule "tools/xgb"]
+	path = tools/xgb
+	url = git@github.com:PJayB/xplat-game-build.git
