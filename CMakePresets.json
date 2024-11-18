@@ -15,10 +15,11 @@
             "installDir": "${sourceDir}/install/x86_64-w64-mingw32",
             "toolchainFile": "${sourceDir}/tools/xgb/cmake/arch/x86_64-w64-mingw32-gcc.cmake",
             "cacheVariables": {
-                "CMAKE_C_FLAGS": "$env{CMAKE_C_FLAGS} -Wall -Werror -mwindows",
+                "CMAKE_C_FLAGS": "$env{CMAKE_C_FLAGS} -Wall -Werror",
                 "CMAKE_C_FLAGS_DEBUG": "$env{CMAKE_C_FLAGS} -D_DEBUG -DDEBUG -O0 -g",
-                "CMAKE_CXX_FLAGS": "$env{CMAKE_CXX_FLAGS} -Wall -mwindows",
-                "CMAKE_CXX_FLAGS_DEBUG": "$env{CMAKE_CXX_FLAGS} -D_DEBUG -DDEBUG -O0 -g"
+                "CMAKE_CXX_FLAGS": "$env{CMAKE_CXX_FLAGS} -Wall",
+                "CMAKE_CXX_FLAGS_DEBUG": "$env{CMAKE_CXX_FLAGS} -D_DEBUG -DDEBUG -O0 -g",
+                "CMAKE_EXE_LINKER_FLAGS": "$env{CMAKE_LINK_FLAGS} -mconsole"
             }
         },
         {
@@ -63,6 +64,7 @@
                 "CMAKE_C_FLAGS_DEBUG": "$env{CMAKE_C_FLAGS} /D_DEBUG /DDEBUG /Od",
                 "CMAKE_CXX_FLAGS": "$env{CMAKE_CXX_FLAGS} /Zi /EHsc",
                 "CMAKE_CXX_FLAGS_DEBUG": "$env{CMAKE_CXX_FLAGS} /D_DEBUG /DDEBUG /Od",
+                "CMAKE_EXE_LINKER_FLAGS": "$env{CMAKE_LINK_FLAGS} /SUBSYSTEM:CONSOLE",
                 "PLATFORM_VARIANT": "x86_64-w64-vs2022"
             }
         }

@@ -68,6 +68,8 @@
             },
             "windows": {
                 "args": [
+                    "-o", "build/test.h",
+                    "README.md"
                 ],
                 "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
                 "preLaunchTask": "Build (Windows Mingw64)"

@@ -1,4 +1,6 @@
 add_executable(inline-it
+    commandline.h
+    commandline.cpp
     inline-it.cpp
 )
 
