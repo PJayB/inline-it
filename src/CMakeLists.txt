@@ -5,6 +5,5 @@ add_executable(inline-it
 )
 
 target_link_libraries(inline-it PRIVATE
-    extras_fmt
     extras_tclap
 )
