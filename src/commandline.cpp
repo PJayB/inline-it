@@ -5,6 +5,10 @@
 
 #include <tclap/CmdLine.h>
 
+#ifndef PROJECT_VERSION
+#   error "Please define PROJECT_VERSION"
+#endif
+
 namespace {
     class auto_tclap {
     public:
@@ -44,7 +48,7 @@ namespace {
 
 commandline::options commandline::parse(int argc, char** argv) {
     options s;
-    auto_tclap cmd("inline-it", ' ', "0.1");
+    auto_tclap cmd("inline-it", ' ', PROJECT_VERSION);
 
     // Switches
     cmd.add<TCLAP::SwitchArg>(s.bare, "b", "bare",
