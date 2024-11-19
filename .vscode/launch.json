@@ -43,7 +43,7 @@
             "name": "VS2022 Debug (cppvsdbg)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/build/win-vs2022/src/Debug/inline-it.exe",
+            "program": "${workspaceRoot}/build/windows-msvc/src/Debug/inline-it.exe",
             "args": [
             ],
             "stopAtEntry": false,
@@ -57,7 +57,7 @@
             "type": "cppdbg",
             "MIMode": "gdb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/win-mingw64/src/Debug/inline-it.exe",
+            "program": "${workspaceFolder}/build/windows-mingw64/src/Debug/inline-it.exe",
             "linux": {
                 "args": [
                 ],
