@@ -5,6 +5,17 @@
 
 namespace commandline {
     struct options {
+        /*
+        Examples of options we might want in the future:
+
+        - Trailing comma or not
+        - Uppercase hex
+        - Spaces instead of tabs, customizable indent
+        - Column count
+        - Variable case/style, e.g. camel, sentence, snake, etc.
+        - Explicit length constant, xxd-style
+
+        */
         std::vector<std::string> input_filenames; // empty = stdin
         std::string output_filename; // empty = stdout
         std::string prefix; // for the constant names, e.g. "k_" -> "k_foo"
