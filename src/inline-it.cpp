@@ -4,6 +4,7 @@
 #include <fstream>
 #include <array>
 #include <iomanip>
+#include <cstdint>
 
 #include "commandline.h"
 
@@ -39,13 +40,16 @@ namespace {
         const std::string_view& prefix,
         size_t columns)
     {
+        static constexpr char hex_chars[] = "0123456789abcdef";
+
         for (size_t i = 0; i < chars.size(); ) {
             ostream << prefix;
             for (size_t j = 0; j < columns && i < chars.size(); ++i, ++j) {
                 if (j) {
                     ostream << ", ";
                 }
-                ostream << std::setw(4) << std::hex << std::showbase << static_cast<unsigned>(chars[i]);
+                uint8_t c = static_cast<uint8_t>(chars[i]);
+                ostream << "0x" << hex_chars[(c & 0xf0) >> 4] << hex_chars[c & 0xf];
             }
             ostream << ",\n";
         }

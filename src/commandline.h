@@ -14,6 +14,9 @@ namespace commandline {
         - Column count
         - Variable case/style, e.g. camel, sentence, snake, etc.
         - Explicit length constant, xxd-style
+        - Add a trailing null terminator
+        - Output in decimal
+        - Output in other widths than byte, e.g. qword or dword
 
         */
         std::vector<std::string> input_filenames; // empty = stdin
