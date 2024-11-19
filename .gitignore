@@ -39,7 +39,3 @@ install/
 .vscode/*
 !.vscode/tasks.json
 !.vscode/launch.json
-
-# Packages
-*.tgz
-*.zip

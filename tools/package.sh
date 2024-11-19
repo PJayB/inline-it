@@ -17,7 +17,7 @@ build_install() {
 package() {
     local flavor="$1"
     local version="$2"
-    tar czv -C "install/$flavor/bin" -f "inline-it-$version-$flavor.tgz" $3
+    tar czv -C "install/$flavor/bin" -f "install/inline-it-$version-$flavor.tgz" $3
 }
 
 build_install linux-x86_64
