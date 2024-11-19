@@ -34,18 +34,6 @@ if [ -z "$preset" ]; then
     og_args+=( --preset "$preset" )
 fi
 
-podman_args=()
-cmake_cmd=( cmake )
-if [ "$preset" == "emscripten" ]; then
-	podman_args+=( --emscripten )
-    cmake_cmd=( emcmake cmake )
-fi
-
-if [ -n "$is_msys" ]; then
-    msbuild_path="/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin"
-    export PATH="${msbuild_path}/Roslyn:${msbuild_path}:$PATH"
-fi
-
 xgb_cmake="./tools/xgb/bin/xgb-cmake"
 
 if [ ! -d "./build/${preset}" ]; then

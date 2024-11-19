@@ -12,7 +12,7 @@
 			"command": "'${workspaceRoot}/tools/build.sh'",
 			"args": [
 				"--open-log",
-				"--preset", "win-vs2022"
+				"--preset", "windows-msvc"
 			],
 			"options": {
 				"cwd": "${workspaceRoot}/src"
@@ -30,7 +30,7 @@
 			"args": [
 				"--open-log",
 				"--configure",
-				"--preset", "win-vs2022"
+				"--preset", "windows-msvc"
 			],
 			"options": {
 				"cwd": "${workspaceRoot}/src"
@@ -117,7 +117,7 @@
 			"command": "'${workspaceRoot}/tools/build.sh'",
 			"args": [
 				"--open-log",
-				"--preset", "win-mingw64"
+				"--preset", "windows-mingw64"
 			],
 			"options": {
 				"cwd": "${workspaceRoot}/src"
@@ -135,7 +135,7 @@
 			"args": [
 				"--open-log",
 				"--configure",
-				"--preset", "win-mingw64"
+				"--preset", "windows-mingw64"
 			],
 			"options": {
 				"cwd": "${workspaceRoot}/src"

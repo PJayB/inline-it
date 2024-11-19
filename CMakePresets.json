@@ -7,7 +7,7 @@
     },
     "configurePresets": [
         {
-            "name": "win-mingw64",
+            "name": "windows-mingw64",
             "displayName": "Windows Mingw64",
             "description": "x64 Mingw Ninja Multi-Config",
             "generator": "Ninja Multi-Config",
@@ -53,7 +53,7 @@
             }
         },
         {
-            "name": "win-vs2022",
+            "name": "windows-msvc",
             "displayName": "Windows VS2022",
             "description": "Visual Studio 2022 Project Generator",
             "generator": "Visual Studio 17 2022",
@@ -81,14 +81,14 @@
             "configurePreset": "linux-aarch64"
         },
         {
-            "name": "win-mingw64",
+            "name": "windows-mingw64",
             "displayName": "Windows Mingw64",
-            "configurePreset": "win-mingw64"
+            "configurePreset": "windows-mingw64"
         },
         {
-            "name": "win-vs2022",
+            "name": "windows-msvc",
             "displayName": "Windows VS2022",
-            "configurePreset": "win-vs2022"
+            "configurePreset": "windows-msvc"
         }
     ]
 }

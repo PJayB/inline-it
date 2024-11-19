@@ -33,6 +33,7 @@
 
 # Default CMake folder
 build/
+install/
 
 # VSCode
 .vscode/*
