@@ -45,7 +45,7 @@ namespace {
                 if (j) {
                     ostream << ", ";
                 }
-                ostream << std::setw(4) << std::hex << std::showbase << static_cast<int>(chars[i]);
+                ostream << std::setw(4) << std::hex << std::showbase << static_cast<unsigned>(chars[i]);
             }
             ostream << ",\n";
         }
