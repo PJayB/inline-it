@@ -12,14 +12,14 @@ build_install() {
 
     "$xgb_cmake" --preset "$flavor" --configure
     "$xgb_cmake" --preset "$flavor" --build --config Release
-    "$xgb_cmake" --preset "$flavor" --install --config Release --prefix "install/$flavor" --strip
+    "$xgb_cmake" --preset "$flavor" --install --config Release --strip
 }
 
 package() {
     local flavor="$1"
     local version="$2"
     local exe="$3"
-    tar czv -C "install/$flavor/bin" -f "install/inline-it-$version-$flavor.tgz" "$exe"
+    tar cz -C "install/$flavor/bin" -f "install/inline-it-$version-$flavor.tgz" "$exe"
 }
 
 build_install linux-x86_64
