@@ -9,13 +9,13 @@
 		{
 			"type": "shell",
 			"label": "Build (Windows VS2022)",
-			"command": "'${workspaceRoot}/tools/build.sh'",
+			"command": "'${workspaceRoot}/tools/xgb/bin/xgb-cmake'",
 			"args": [
 				"--open-log",
 				"--preset", "windows-msvc"
 			],
 			"options": {
-				"cwd": "${workspaceRoot}/src"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$msCompile"
@@ -26,14 +26,14 @@
 		{
 			"type": "shell",
 			"label": "Configure (Windows VS2022)",
-			"command": "'${workspaceRoot}/tools/build.sh'",
+			"command": "'${workspaceRoot}/tools/xgb/bin/xgb-cmake'",
 			"args": [
 				"--open-log",
 				"--configure",
 				"--preset", "windows-msvc"
 			],
 			"options": {
-				"cwd": "${workspaceRoot}/src"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$msCompile"
@@ -44,13 +44,13 @@
 		{
 			"type": "shell",
 			"label": "Build (Linux x86_64)",
-			"command": "'${workspaceRoot}/tools/build.sh'",
+			"command": "'${workspaceRoot}/tools/xgb/bin/xgb-cmake'",
 			"args": [
 				"--open-log",
 				"--preset", "linux-x86_64"
 			],
 			"options": {
-				"cwd": "${workspaceRoot}/src"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -61,14 +61,14 @@
 		{
 			"type": "shell",
 			"label": "Configure (Linux x86_64)",
-			"command": "'${workspaceRoot}/tools/build.sh'",
+			"command": "'${workspaceRoot}/tools/xgb/bin/xgb-cmake'",
 			"args": [
 				"--open-log",
 				"--configure",
 				"--preset", "linux-x86_64"
 			],
 			"options": {
-				"cwd": "${workspaceRoot}/src"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -79,13 +79,13 @@
 		{
 			"type": "shell",
 			"label": "Build (Linux aarch64)",
-			"command": "'${workspaceRoot}/tools/build.sh'",
+			"command": "'${workspaceRoot}/tools/xgb/bin/xgb-cmake'",
 			"args": [
 				"--open-log",
 				"--preset", "linux-aarch64"
 			],
 			"options": {
-				"cwd": "${workspaceRoot}/src"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -96,14 +96,14 @@
 		{
 			"type": "shell",
 			"label": "Configure (Linux aarch64)",
-			"command": "'${workspaceRoot}/tools/build.sh'",
+			"command": "'${workspaceRoot}/tools/xgb/bin/xgb-cmake'",
 			"args": [
 				"--open-log",
 				"--configure",
 				"--preset", "linux-aarch64"
 			],
 			"options": {
-				"cwd": "${workspaceRoot}/src"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -114,13 +114,13 @@
 		{
 			"type": "shell",
 			"label": "Build (Windows Mingw64)",
-			"command": "'${workspaceRoot}/tools/build.sh'",
+			"command": "'${workspaceRoot}/tools/xgb/bin/xgb-cmake'",
 			"args": [
 				"--open-log",
 				"--preset", "windows-mingw64"
 			],
 			"options": {
-				"cwd": "${workspaceRoot}/src"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$gcc"
@@ -131,14 +131,14 @@
 		{
 			"type": "shell",
 			"label": "Configure (Windows Mingw64)",
-			"command": "'${workspaceRoot}/tools/build.sh'",
+			"command": "'${workspaceRoot}/tools/xgb/bin/xgb-cmake'",
 			"args": [
 				"--open-log",
 				"--configure",
 				"--preset", "windows-mingw64"
 			],
 			"options": {
-				"cwd": "${workspaceRoot}/src"
+				"cwd": "${workspaceRoot}"
 			},
 			"problemMatcher": [
 				"$gcc"

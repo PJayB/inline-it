@@ -5,13 +5,14 @@ die() { echo "$*" >&2 ; exit 1 ; }
 
 [ -v MSYSTEM ] && die "Use package.bat on Windows."
 
+xgb_cmake="./tools/xgb/bin/xgb-cmake"
+
 build_install() {
     local flavor="$1"
 
-    "tools/build.sh" --preset "$flavor" --configure
-    "tools/build.sh" --preset "$flavor" --config Release
-
-    "tools/build.sh" --preset "$flavor" --install --config Release --prefix "install/$flavor" --strip
+    "$xgb_cmake" --preset "$flavor" --configure
+    "$xgb_cmake" --preset "$flavor" --build --config Release
+    "$xgb_cmake" --preset "$flavor" --install --config Release --prefix "install/$flavor" --strip
 }
 
 package() {
