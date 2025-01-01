@@ -42,6 +42,8 @@
             "request": "launch",
             "program": "${workspaceRoot}/build/windows-msvc/src/Debug/inline-it.exe",
             "args": [
+                "-o", "build/test.h", "-z",
+                "README.md"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
