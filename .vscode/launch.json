@@ -33,9 +33,6 @@
             "program": "${workspaceRoot}/build/linux-x86_64/src/Debug/inline-it",
             "args": [
             ],
-            "env": {
-                "LD_PRELOAD": "${workspaceFolder}/librenderdoc.so"
-            },
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "Build (Linux x86_64)"
         },
