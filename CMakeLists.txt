@@ -14,7 +14,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_WIN32_EXECUTABLE OFF)
 
 project(inline-it
-    VERSION 0.2
+    VERSION 0.3
     LANGUAGES C CXX
     HOMEPAGE_URL "https://github.com/PJayB/inline-it"
     )
