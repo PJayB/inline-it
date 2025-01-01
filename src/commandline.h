@@ -23,6 +23,7 @@ namespace commandline {
         std::string output_filename; // empty = stdout
         std::string prefix; // for the constant names, e.g. "k_" -> "k_foo"
         std::string byte_type; // the type of char, e.g. unsigned char, uint8_t, etc.
+        bool null_terminate;
         bool bare;
     };
 

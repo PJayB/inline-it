@@ -53,6 +53,8 @@ commandline::options commandline::parse(int argc, char** argv) {
     // Switches
     cmd.add<TCLAP::SwitchArg>(s.bare, "b", "bare",
         "Just output hex, no identifiers", false);
+    cmd.add<TCLAP::SwitchArg>(s.null_terminate, "z", "null-terminate",
+        "Add a null terminator to the end of the input", false);
 
     // Single value args
     cmd.add<TCLAP::ValueArg<std::string>>(s.output_filename, "o",
