@@ -12,7 +12,7 @@ build_install() {
 
     "$xgb_cmake" --preset "$flavor" --configure
     "$xgb_cmake" --preset "$flavor" --build --config Release
-    "$xgb_cmake" --preset "$flavor" --install --config Release --strip
+    "$xgb_cmake" --preset "$flavor" --install --config Release --strip --prefix "install/$flavor"
 }
 
 package() {
